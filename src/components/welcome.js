@@ -25,7 +25,12 @@ class Welcome extends Component {
                         painless hybrid obtainable backup plan on starship
                     </div>
                     <div className="btn_con">
-                        <button className="continue">start exploring</button>
+                        <button onClick = {
+                            () =>{
+                                this.props.history.push("/flightpickup"); 
+                            }
+
+                        }className="continue">start exploring</button>
                     </div>
 
                     <div className="secondGlass">
