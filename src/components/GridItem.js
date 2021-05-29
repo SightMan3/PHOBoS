@@ -4,9 +4,8 @@ class GridItem extends React.Component {
     constructor(props) {
         super(props)
         this.name = props.name
-        this.state = {
-            
-        }
+        this.details = props.details;
+
     }
     render(){
         return (
@@ -24,6 +23,7 @@ class GridItem extends React.Component {
                 <div style={{ flex: "2", width: "100%" }} className="downDivider">
                   <p  className="spaceTextItem">Flight date: 2020. 07. 01 T00:00:00 .000Z</p>
                   <p  className="spaceTextItem">Čo, stojí líístok na Mars: 1000 000 000 Dollars </p>
+                  <p  className="spaceTextItem">{this.details}</p>
                 </div>
       
                 <div

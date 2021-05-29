@@ -8,7 +8,6 @@
   background-size: cover;
   height: 100%;
   flex-direction: column;
-
 }
 
 .spaceTextItem {
@@ -57,7 +56,7 @@ $margin_left: 20px;
   flex: 1;
   flex-direction: column;
   background-color: white;
-  height: 400px;
+  height: 500px;
   aspect-ratio: 3/4;
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.15);
@@ -113,7 +112,7 @@ $margin_left: 20px;
   .continue {
     border: none;
     outline: none;
-    background-image: linear-gradient(to bottom right, #227e81, #00cdac);
+    background-image: linear-gradient(to bottom right, #FF512F,#DD2476);
 
     width: 50%;
     height: 60%;
