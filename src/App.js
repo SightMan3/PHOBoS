@@ -7,8 +7,12 @@ import {
 } from "react-router-dom";
 
 import Welcome from "./components/welcome";
+
 import Wallmart from "./components/wallmart";
 import Category from "./components/category";
+
+
+import Spacechoose from './components/Spacechoose'
 
 function App() {
   return (
@@ -16,8 +20,12 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact component={Welcome}/>
+
           <Route path="/wallmart" component={Wallmart}/>
           <Route path="/category" component={Category} />
+
+          <Route path="/flightpickup" exact component={Spacechoose}/>
+
         </Switch>
       </Router>
 
