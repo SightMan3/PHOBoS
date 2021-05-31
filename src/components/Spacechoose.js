@@ -11,8 +11,18 @@ class Spacechoose extends PureComponent {
       items: [],
     };
   }
+  timeConverter(UNIX_timestamp){
+    var a = new Date(UNIX_timestamp * 1000);
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var year = a.getFullYear() + 76;
+    var month = a.getMonth();
+    var date = a.getDate();
+
+    var time =  year + '.' + month + '.'+ date + '.';
+    return time;
+  }
   componentDidMount() {
-    console.log("fetching...")
+    console.log("fetching...");
     fetch("https://api.spacexdata.com/v4/launches")
       .then((res) => res.json())
       .then(
@@ -22,9 +32,6 @@ class Spacechoose extends PureComponent {
             items: result,
           });
         },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
         (error) => {
           this.setState({
             isLoaded: true,
@@ -33,14 +40,28 @@ class Spacechoose extends PureComponent {
         }
       );
   }
+  callback = (name, details) => {
+    this.props.history.push("/summary");
+  };
 
-  gridItem(name,details) {
-    return <GridItem name={name} details = {details}></GridItem>;
+  gridItem(name, details,static_fire_date_unix) {
+    var date = this.timeConverter(static_fire_date_unix)
+    try{
+      var max = 40;
+      var data = details.split(" ");
+      if(data.length > max){
+        details = data.slice(0, max).join(" ")+"..."; 
+      }
+      }catch(Exception){}
+    
+    return (
+      <GridItem callback={this.callback} name={name} details={details} date={date}></GridItem>
+    );
   }
 
   render() {
     const { error, isLoaded, items } = this.state;
-    console.log(this.state.items)
+    console.log(this.state.items);
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
@@ -53,14 +74,12 @@ class Spacechoose extends PureComponent {
           </div>
           <div className="spaceRocketContainer">
             <div className="spaceGrid">
-              {items.map((el) => this.gridItem(el.name, el.details))}
+              {items.map((el) => this.gridItem(el.name, el.details,el.static_fire_date_unix))}
             </div>
           </div>
         </div>
       );
     }
-
-   
   }
 }
 

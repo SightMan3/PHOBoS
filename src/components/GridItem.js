@@ -2,10 +2,11 @@ import React from 'react'
 
 class GridItem extends React.Component {
     constructor(props) {
-        super(props)
-        this.name = props.name
+        super(props);
+        this.name = props.name;
         this.details = props.details;
-
+        this.callback = props.callback;
+        this.date = props.date;
     }
     render(){
         return (
@@ -21,17 +22,19 @@ class GridItem extends React.Component {
       
               <div style={{}} className="downHalf">
                 <div style={{ flex: "2", width: "100%" }} className="downDivider">
-                  <p  className="spaceTextItem">Flight date: 2020. 07. 01 T00:00:00 .000Z</p>
-                  <p  className="spaceTextItem">Čo, stojí líístok na Mars: 1000 000 000 Dollars </p>
+                  <p  className="spaceTextItem">Flight date:  {this.date}</p>
+                  <p  className="spaceTextItem">Price: {Math.floor(Math.random() * 1000000)+50000} $</p>
                   <p  className="spaceTextItem">{this.details}</p>
                 </div>
-      
+
                 <div
                   style={{ flex: "1", flexDirection: "row", width: "100%" }}
                   className="downDivider"
                 >
                   <div className="btn_con">
-                    <button className="continue">start exploring</button>
+                    <button onClick= {()=> {
+                      this.callback(this.name,this.details)
+                    }}className="continue">start exploring</button>
                   </div>
                 </div>
               </div>
