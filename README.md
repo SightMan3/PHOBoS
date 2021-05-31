@@ -1,6 +1,16 @@
-# Getting Started with Create React App
+# P.H.O.B.O.S
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+P. -> painless
+
+H. -> hybrid
+
+O. -> obtainable
+
+B. -> backup plan
+
+O. -> on
+
+S. -> starship
 
 ## Available Scripts
 
