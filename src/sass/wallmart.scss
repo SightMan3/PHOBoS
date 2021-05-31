@@ -1,0 +1,208 @@
+$rad: 35px;
+
+.wm-section {
+  background-image: url("../assets/wallmart bg.png");
+  height: 100vh;
+  width: 100%;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .title {
+    color: white;
+    font-size: 250%;
+    font-weight: bold;
+    //background-color: red;
+    height: 15%;
+    margin-bottom: 3%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tiles {
+    height: 70%;
+
+    .first_category {
+      height: 50%;
+
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      flex-direction: row;
+
+      .electronics {
+        background-image: url("../assets/electronics.jpg");
+        background-size: cover;
+        background-position: center;
+
+        width: 40%;
+        height: 100%;
+        margin-right: 1%;
+        margin-bottom: 1%;
+        border-radius: $rad;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: black;
+        font-size: 200%;
+        font-weight: bold;
+
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          transform: scale(1.03);
+          &:after {
+            content: "Electronics";
+          }
+        }
+        &:active {
+          transform: scale(1);
+        }
+      }
+      .food {
+        background-image: url("../assets/food.jpg");
+        background-size: cover;
+        background-position: center;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: black;
+        font-size: 200%;
+        font-weight: bold;
+
+        width: 20%;
+        height: 100%;
+        margin-bottom: 1%;
+        border-radius: $rad;
+
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          transform: scale(1.05);
+          &:after {
+            content: "Food";
+          }
+        }
+        &:active {
+          transform: scale(1);
+        }
+      }
+    }
+
+    .second_category {
+      height: 50%;
+
+
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: row;
+
+      .own_category {
+        width: 30%;
+        height: 100%;
+        margin-right: 1%;
+        border-radius: $rad;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        background-color: rgba(255, 255, 255, .15);
+        backdrop-filter: blur(10px);
+
+
+
+        p {
+          color: white;
+          font-weight: bold;
+          font-size: 150%;
+          padding-bottom: 5%;
+        }
+        input {
+          outline: none;
+          border: none;
+
+          background-image: linear-gradient(to bottom right, #DD2476, #FF512F);
+
+          width: 60%;
+          height: 16%;
+          border-radius: 13px;
+
+          color: white;
+          font-size: 15px;
+          font-weight: bold;
+          text-align: center;
+
+          margin-bottom: 2%;
+
+          transition: all 0.2s ease-in-out;
+          &:focus {
+            transform: scale(1.1);
+          }
+
+        }
+
+        button {
+          outline: none;
+
+          border: 2px #FF512F solid;
+          border-radius: 13px;
+          background-color: transparent;
+
+          width: 25%;
+          height: 16%;
+
+          color: white;
+          font-size: 15px;
+          font-weight: bold;
+          text-align: center;
+
+          transition: all 0.2s ease-in-out;
+          &:hover {
+            transform: scale(1.1);
+            background-color: #FF512F;
+          }
+          &:active {
+            transform: scale(1);
+          }
+        }
+
+      }
+      .health {
+        background-image: url("../assets/health.jpg");
+        background-size: cover;
+        background-position: center;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: black;
+        font-size: 200%;
+        font-weight: bold;
+
+        width: 30%;
+        height: 100%;
+        border-radius: $rad;
+
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          transform: scale(1.05);
+          &:after {
+            content: "health";
+          }
+        }
+        &:active {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}

@@ -9,6 +9,11 @@ class Welcome extends Component {
         }
     }
 
+    test = () => {
+        console.log(this.props);
+        this.props.history.push("/wallmart")
+    }
+
     render() {
         return (
             <div className="w-section">
@@ -25,7 +30,7 @@ class Welcome extends Component {
                         painless hybrid obtainable backup plan on starship
                     </div>
                     <div className="btn_con">
-                        <button className="continue">start exploring</button>
+                        <button className="continue" onClick={this.test}>start exploring</button>
                     </div>
 
                     <div className="secondGlass">
