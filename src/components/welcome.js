@@ -31,15 +31,20 @@ class Welcome extends Component {
                     </div>
                     <div className="btn_con">
 
+
                         <button className="continue" onClick={this.test}>start exploring</button>
+
+
+                        {/* <button className="continue" onClick={this.test}>start exploring</button> */}
 
                         <button onClick = {
                             () =>{
                                 this.props.history.push("/flightpickup");
                             }
 
-                        }className="continue">flight choose, wisely</button>
 
+                        }className="continue">flight choose, wisely</button>
+                        
                     </div>
 
                     <div className="secondGlass">
@@ -50,7 +55,7 @@ class Welcome extends Component {
                 </div>
 
             </div>
-        );
+        )
     }
 }
 
