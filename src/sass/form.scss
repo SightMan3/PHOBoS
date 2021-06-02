@@ -1,0 +1,168 @@
+$Input_shadow: rgba(0, 0, 0, 0.23) 0px 3px 6px;
+.w-section_f {
+  background-image: url("../assets/Web 1920 – 1.png");
+  background-size: cover;
+
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+
+  .main_f {
+    //border: red 5px solid;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .title_f {
+      text-align: center;
+      padding-top: 2%;
+
+      width: 55%;
+      height: 20%;
+
+      color: white;
+      font-size: 420%;
+    }
+
+    .content_f {
+      //border: blue 5px solid;
+      color: white;
+      font-size: 23px;
+
+      text-align: center;
+      width: 50%;
+      padding-left: 2%;
+      margin-bottom: 5%;
+    }
+
+    .btn_con_f {
+      //border: blue 5px solid;
+      width: 54%;
+      height: 30%;
+
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+
+      .continue_f {
+        border: none;
+        outline: none;
+        background-image: linear-gradient(to bottom right, #227e81, #00cdac);
+
+        margin-bottom: 5%;
+        width: 50%;
+        height: 25%;
+        border-radius: 50px;
+
+        transition: all 0.2s ease-in-out;
+
+        color: white;
+        font-size: 20px;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+        &:active {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+  .loginform {
+    height: 55%;
+    width: 85%;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .or {
+      padding: 3%;
+
+      font-size: 20px;
+      color: black;
+    }
+    #authState {
+      font-size: 30px;
+
+      color: black;
+    }
+
+    .email {
+      outline: none;
+      border: none;
+
+      margin: 5%;
+      //background-color: $color_blue;
+
+      width: 45%;
+      height: 10%;
+      border-radius: 3px;
+      box-shadow: $Input_shadow;
+
+      font-size: 18px;
+
+      text-align: center;
+
+      transition: 0.2s ease-out;
+
+      &:focus {
+        transform: scale(1.1);
+      }
+    }
+
+    .password {
+      outline: none;
+      border: none;
+
+      margin-bottom: 4%;
+
+      width: 45%;
+      height: 10%;
+      border-radius: 3px;
+      box-shadow: $Input_shadow;
+
+      font-size: 18px;
+      text-align: center;
+
+      transition: 0.2s ease-out;
+
+      &:focus {
+        transform: scale(1.1);
+      }
+    }
+    .undertitle {
+      width: 45%;
+      font-size: 30px;
+      text-align: start;
+      color: white;
+    }
+    ::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: white;
+      opacity: 0.6; /* Firefox */
+    }
+    .name {
+      outline: none;
+      border: none;
+      background-color: grey;
+      width: 45%;
+      height: 14%;
+      border-radius: 100000000000px;
+      margin-top: 1%;
+      box-shadow: $Input_shadow;
+
+      font-size: 18px;
+
+      text-align: center;
+
+      transition: 0.2s ease-out;
+
+      &:focus {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
