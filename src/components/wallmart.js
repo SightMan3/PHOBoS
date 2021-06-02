@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import "../sass/wallmart.scss";
-import axios from "axios";
 
 class Wallmart extends Component {
     constructor(props) {
@@ -39,26 +38,24 @@ class Wallmart extends Component {
                         <div
                             className="electronics"
                             onClick={() => {
-                                this.redirect("elk")
+                                this.redirect("electronics")
                             }}
                         />
                         <div
-                            className="food"
-                            onClick={() => { this.redirect("food") }}
+                            className="jew"
+                            onClick={() => { this.redirect("jewelery") }}
                         />
                     </div>
                     <div className="second_category">
                         <div className="own_category">
-                            <p>or search on your own</p>
-                            <input
-                                type="text"
-                                onChange={(e) => { this.setIn(e) }}/>
-                            <button onClick={() => { this.redirect(this.state.in_val) }}
+                            <p>or random stuff</p>
+
+                            <button onClick={() => { this.redirect("stuff") }}
                             >search</button>
                         </div>
                         <div
-                            className="health"
-                            onClick={() => { this.redirect("health") }}
+                            className="clothing"
+                            onClick={() => { this.redirect("Clothing") }}
                         />
                     </div>
 

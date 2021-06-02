@@ -17,9 +17,13 @@ $rad: 35px;
     height: 15%;
     margin-bottom: 3%;
 
+    width: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
+    text-align: center;
   }
 
   .tiles {
@@ -63,8 +67,8 @@ $rad: 35px;
           transform: scale(1);
         }
       }
-      .food {
-        background-image: url("../assets/food.jpg");
+      .jew {
+        background-image: url("../assets/jewelery.jpg");
         background-size: cover;
         background-position: center;
 
@@ -85,7 +89,7 @@ $rad: 35px;
         &:hover {
           transform: scale(1.05);
           &:after {
-            content: "Food";
+            content: "jewelery";
           }
         }
         &:active {
@@ -175,8 +179,8 @@ $rad: 35px;
         }
 
       }
-      .health {
-        background-image: url("../assets/health.jpg");
+      .clothing {
+        background-image: url("../assets/clothing.jpg");
         background-size: cover;
         background-position: center;
 
@@ -196,7 +200,7 @@ $rad: 35px;
         &:hover {
           transform: scale(1.05);
           &:after {
-            content: "health";
+            content: "Clothing";
           }
         }
         &:active {

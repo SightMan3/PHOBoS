@@ -1,43 +1,145 @@
+:root {
+  --hue: 220;
+  --sat: 100;
+  --light: 81;
+}
+
 .ct-section {
-  background-color: #2b2b2b;
-  height: 220vh;
+  background-image: url("../assets/wallmartBG.png");
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
   width: 100%;
 
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+  flex-direction: column;
 
   .center_of_items {
     //background-color: red;
-    height: 90%;
+    height: 100%;
     width: 70%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 300px);
+    grid-gap: 10px;
+    grid-row-gap: 40px;
+
   }
 
+  .title {
+    //background-color: red;
+    height: 20vh;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+  }
 
 }
 
 .center_of_windows {
   width: 100%;
   height: 100%;
-}
-
-.window {
-  background-color: white;
-  height: 18%;
-  width: 25%;
 
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
 
-  .darken {
-    .price {
-      margin-bottom: 5%;
+  //background-color: red;
+
+  .product_title {
+    color: white;
+    font-weight: bold;
+
+    margin-bottom: 2%;
+
+    text-align: center;
+    width: 70%;
+  }
+
+  .window {
+    background-color: white;
+    height: 100%;
+    width: 90%;
+
+    border-radius: 20px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+
+    transition: all 0.2s ease-in-out;
+
+    .hide {
+      display: flex;
+      border-radius: 20px;
+
+      height: 100%;
+      width: 100%;
+
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      background-color: rgba(0,0,0 , 0.25);
+
+      .buy {
+        outline: none;
+        border: none;
+
+        color: white;
+        background-color: black;
+
+        height: 10%;
+        width: 40%;
+
+        border-radius: 60px;
+
+        font-size: 13px;
+        font-weight: bold;
+
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+        }
+        &:active {
+          transform: scale(1);
+        }
+      }
+
+      .price {
+        color: white;
+      }
+
     }
+
+  }
+
+
+  .window .hide {
+    transition: all 0.2s ease-in-out;
+    visibility: hidden;
+  }
+
+  .window:hover .hide {
+    transition: all 0.2s ease-in-out;
+    visibility: visible;
+
   }
 
   transition: all 0.2s ease-in-out;
 
-
 }
+
+
+
+
+
+
+

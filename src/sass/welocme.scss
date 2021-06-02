@@ -43,12 +43,14 @@
     flex-direction: column;
 
     .title {
-      text-align: center;
-      padding-top: 2%;
 
+      //background-color: red;
 
-      width: 55%;
+      width: 80%;
       height: 20%;
+
+      display: flex;
+      justify-content: flex-start;
 
       color: white;
       font-size: 420%;
