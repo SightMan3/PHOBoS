@@ -7,7 +7,7 @@ class Product extends Component {
 
         this.state = {
             item_price: this.props.price,
-            item_title: this.props.title
+            item_title: this.props.title,
         }
     }
 
@@ -29,7 +29,19 @@ class Product extends Component {
                         <div className="product_title">
                             {this.state.item_title}
                         </div>
-                        <button className="buy">add to cart</button>
+                        <button
+                            className="buy"
+                            onClick={() => {
+                                let obj = {
+                                    name: this.state.item_title,
+                                    price: this.state.item_price,
+                                    img: this.image_url
+                                }
+
+                                this.props.func(obj)
+
+                            }}
+                        >add to cart</button>
                         <div className="price">
                             {this.state.item_price} $
                         </div>

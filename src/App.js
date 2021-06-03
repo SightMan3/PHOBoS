@@ -11,6 +11,7 @@ import Welcome from "./components/welcome";
 import Wallmart from "./components/wallmart";
 import Category from "./components/category";
 import SummaryScreen from "./components/SummaryScreen";
+import Accsesories from "./components/subComponents/accsesories";
 
 import Spacechoose from './components/Spacechoose'
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/category" component={Category} />
           <Route path="/summary" component={SummaryScreen} />
           <Route path="/flightpickup" exact component={Spacechoose}/>
+          <Route path="/list" exact component={Accsesories} />
 
         </Switch>
       </Router>

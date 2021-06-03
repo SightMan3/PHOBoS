@@ -33,7 +33,8 @@ class GridItem extends React.Component {
                 >
                   <div className="btn_con">
                     <button onClick= {()=> {
-                      this.callback(this.name,this.details)
+                        let price = Math.floor(Math.random() * 1000000)+50000;
+                        this.callback(this.name,this.details, price)
                     }}className="continue">start exploring</button>
                   </div>
                 </div>

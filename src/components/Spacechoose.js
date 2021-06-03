@@ -40,8 +40,17 @@ class Spacechoose extends PureComponent {
         }
       );
   }
-  callback = (name, details) => {
-    this.props.history.push("/summary");
+  callback = (name, details, price) => {
+    this.props.history.push({
+      pathname: "/Wallmart",
+      state: {
+        rocket: {
+          name: name,
+          details: details,
+          price: price
+        }
+      }
+    });
   };
 
   gridItem(name, details,static_fire_date_unix) {

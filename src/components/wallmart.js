@@ -14,7 +14,15 @@ class Wallmart extends Component {
     redirect = (prop) => {
         this.props.history.push({
             pathname: "/category",
-            state: { route: prop }
+            state: {
+                route: prop,
+                rocket: {
+                    name: this.props.location.state.rocket.name,
+                    price: this.props.location.state.rocket.price,
+                    details: this.props.location.state.rocket.details
+                },
+                items: this.props.location.state.items
+            }
         })
     }
 
@@ -25,6 +33,11 @@ class Wallmart extends Component {
         })
 
     }
+
+    componentDidMount() {
+        console.log(this.props)
+    }
+
 
 
     render() {

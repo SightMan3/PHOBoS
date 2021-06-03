@@ -32,7 +32,7 @@ class Welcome extends Component {
                     <div className="btn_con">
 
 
-                        <button className="continue" onClick={this.test}>start exploring</button>
+
 
 
                         {/* <button className="continue" onClick={this.test}>start exploring</button> */}
@@ -43,8 +43,8 @@ class Welcome extends Component {
                             }
 
 
-                        }className="continue">flight choose, wisely</button>
-                        
+                        }className="continue">start exploring</button>
+
                     </div>
 
                     <div className="secondGlass">
