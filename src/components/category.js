@@ -46,6 +46,9 @@ class Category extends Component {
 
     componentDidMount() {
 
+            console.log(this.props)
+       
+    
         fetch(`https://fakestoreapi.com${this.state.endpoint}`,  {
             method: "GET",
             mode: "cors",
@@ -110,10 +113,14 @@ class Category extends Component {
                 pathname: "/Wallmart",
                 state: {
                     items: this.arr,
+                    name:this.props.location.state.name,
+                    adress:this.props.location.state.adress,
+                    money:this.props.location.state.money,
                     rocket: {
-                        name: this.props.location.state.rocket.name,
-                        price: this.props.location.state.rocket.price,
-                        details: this.props.location.state.rocket.details
+                        name:    this.props.location.state.rocket.name,
+                        price:   this.props.location.state.rocket.price,
+                        details: this.props.location.state.rocket.details,
+                        time:    this.props.location.state.rocket.time,
                     },
                 }
             });
@@ -145,11 +152,15 @@ class Category extends Component {
                                 this.props.history.push({
                                     pathname: "/list",
                                     state: {
+                                        name:this.props.location.state.name,
+                                        adress:this.props.location.state.adress,
+                                        money:this.props.location.state.money,
                                         items: this.props.location.state.items,
                                         rocket: {
-                                            name: this.props.location.state.rocket.name,
-                                            price: this.props.location.state.rocket.price,
-                                            details: this.props.location.state.rocket.details
+                                            name:    this.props.location.state.rocket.name,
+                                            price:   this.props.location.state.rocket.price,
+                                            details: this.props.location.state.rocket.details,
+                                            time:    this.props.location.state.rocket.time,
                                         }
 
                                     }
