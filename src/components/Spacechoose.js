@@ -17,7 +17,6 @@ class Spacechoose extends PureComponent {
     var year = a.getFullYear() + 76;
     var month = a.getMonth();
     var date = a.getDate();
-
     var time =  year + '.' + month + '.'+ date + '.';
     return time;
   }
