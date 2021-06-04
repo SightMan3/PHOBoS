@@ -76,7 +76,7 @@ class Spacechoose extends PureComponent {
   gridItem(name, details, static_fire_date_unix) {
     var date = this.timeConverter(static_fire_date_unix);
     try {
-      var max = 40;
+      var max = 25;
       var data = details.split(" ");
       if (data.length > max) {
         details = data.slice(0, max).join(" ") + "...";
@@ -109,7 +109,7 @@ class Spacechoose extends PureComponent {
       return (
         <div className="spaceContainer">
           <div className="spaceHeaderContainer">
-            <p className="title">Flight pick up, you.</p>
+            <p className="title">Pick your starship</p>
           </div>
           <div className="spaceRocketContainer">
             <div className="spaceGrid">

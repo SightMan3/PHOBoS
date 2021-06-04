@@ -19,7 +19,9 @@ class Welcome extends Component {
       <div className="w-section">
         <div className="main">
           <div className="title">P.H.O.B.o.S</div>
-          <div className="content">painless hybrid obtainable backup plan on starship</div>{" "}
+          <div className="content">
+            painless hybrid obtainable backup plan on starship
+          </div>{" "}
           <div className="firstGlass">
             <div className="glassFirst">
               make new memories, discover darkness of space, live the life you
@@ -39,9 +41,7 @@ class Welcome extends Component {
             </button>
           </div>
           <div className="secondGlass">
-            <div className="glass">
-              live the way your kids to live, you want.
-            </div>
+            <div className="glass">Finally enjoy freedom with your family</div>
           </div>
         </div>
       </div>

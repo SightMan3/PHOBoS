@@ -17,14 +17,16 @@ class GridItem extends React.Component {
                   <img className="spaceImage" />
                 </div>
                 <div className="upperHalfChild">
-                  <p className="spaceTextItem">{ this.name}</p>
+                  <p className="spaceTextItemBold">{ this.name}</p>
                 </div>
               </div>
       
               <div style={{}} className="downHalf">
                 <div style={{ flex: "2", width: "100%" }} className="downDivider">
                   <p  className="spaceTextItem">Flight date:  {this.date}</p>
+                  <br/>
                   <p  className="spaceTextItem">Price: {Math.floor(Math.random() * 1000000)+50000} $</p>
+                  <br/>
                   <p  className="spaceTextItem">{this.details}</p>
                 </div>
 
