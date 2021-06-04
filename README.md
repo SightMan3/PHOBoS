@@ -41,15 +41,15 @@ First, you need to fill in the form with basic information about yourself. Then 
 
 # APIs we've used:
 
-https://fakestoreapi.com/
+ - https://fakestoreapi.com/
 
-https://api.spacexdata.com/v4/launches
+ - https://api.spacexdata.com/v4/launches
 
-http://api.open-notify.org/astros.json
+ - http://api.open-notify.org/astros.json
 
-http://open.mapquestapi.com/directions/v2/routematrix
+ - http://open.mapquestapi.com/directions/v2/routematrix
 
-http://www.mapquestapi.com/geocoding/v1/address
+ - http://www.mapquestapi.com/geocoding/v1/address
 
 ## How to try
  
@@ -59,7 +59,7 @@ https://phobos-764e7.web.app/
 
 ## Challenges and accomplishments
 
-From this challange we've learned that finding a good free api is a lot harded than it sounds
+ - From this challange we've learned that finding a good free api is a lot harded than it sounds
 
 ## License
 
