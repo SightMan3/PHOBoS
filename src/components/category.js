@@ -48,7 +48,7 @@ class Category extends Component {
 
     componentDidMount() {
 
-            console.log(this.props)
+     
        
     
         fetch(`https://fakestoreapi.com${this.state.endpoint}`,  {
@@ -58,7 +58,7 @@ class Category extends Component {
             .then(res => {
                 return res.json()
             }).then(dato => {
-            console.log(dato)
+
             this.setState({
                 res: dato
             })
@@ -79,7 +79,7 @@ class Category extends Component {
                 .then(res => {
                     return res.json()
                 }).then(dato => {
-                console.log(dato)
+     
                 this.setState({
                     res: dato
                 })
@@ -87,10 +87,6 @@ class Category extends Component {
                 .catch(err => {
                     console.log(err);
                 })
-        }
-
-        if (route === "jewelery") {
-            console.log("wtf");
         }
 
     }
@@ -184,7 +180,7 @@ class Category extends Component {
                 </div>
                 <div className="center_of_items">
                     {this.state.res.map((x, y) => {
-                        console.log(this.state.price[y]);
+
 
                         return <Product
                             title={x.title}

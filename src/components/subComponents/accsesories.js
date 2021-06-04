@@ -69,12 +69,10 @@ class Accsesories extends Component {
                                     <button
                                         onClick={() => {
                                             let itm = this.state.items;
-                                            console.log(x.name)
+                       
                                             for (let i = 0; i < itm.length; i++) {
                                                if (itm[i].name === x.name) {
                                                    itm.pop(i);
-
-                                                   console.log(itm)
                                                }
 
                                             }

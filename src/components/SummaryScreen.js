@@ -7,14 +7,14 @@ class SummaryScreen extends Component {
   constructor(props) {
     super(props);
     this.key = "BrAsr22igPnrx6MHvRmzxbiHIDNfr7hA";
-    console.log(props.location.state.rocket.time);
-    console.log(new Date(props.location.state.rocket.time).getTime() / 1000000);
+    console.log(props)
     this.state = {
       timeToArrive: new Date(props.location.state.rocket.time).getTime(),
       countdownFrom: Date.now(),
       error: null,
+      name: props.location.state.name,
       isLoaded: false,
-      items: [],
+      items: 0,
       secondLoaded: false,
       text: "Loading...",
       price: "unknown €",
@@ -23,13 +23,11 @@ class SummaryScreen extends Component {
   componentDidMount() {
     this.fetchDistanceFromTwoPoints();
     this.fetch();
-    console.log("mary summary |/ ");
-    console.log(this.props);
+
 
     var rocket = this.props.location.state.rocket.price;
     var array = this.props.location.state.items; //price
-    console.log(rocket);
-    console.log(array);
+
     var final = rocket;
     for (var i = 0; i < array.length; i++) {
       final += array[i].price;
@@ -44,7 +42,7 @@ class SummaryScreen extends Component {
     var second_point = await this.fetchPoint(text === "" ? "Košice, Slovakia" : text);
     second_point = { latitude: second_point.lat, longitude: second_point.lng };
     var distance = getDistance(first_point, second_point) / 1000 + "km";
-    console.log(distance);
+
     this.setState({
       text: distance,
       secondLoaded: true,
@@ -76,13 +74,13 @@ class SummaryScreen extends Component {
   }
   async fetchPoint(point) {
     var url =
-      "http://www.mapquestapi.com/geocoding/v1/address?key=BrAsr22igPnrx6MHvRmzxbiHIDNfr7hA&location=" +
+      "https://www.mapquestapi.com/geocoding/v1/address?key=BrAsr22igPnrx6MHvRmzxbiHIDNfr7hA&location=" +
       point;
     var return_data = "dull";
     await fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        console.log("point of " + point);
+
         return_data = data.results[0].locations[0].displayLatLng;
       });
 
@@ -91,7 +89,7 @@ class SummaryScreen extends Component {
 
   fetchMatrix() {
     var url =
-      "http://open.mapquestapi.com/directions/v2/routematrix?key=BrAsr22igPnrx6MHvRmzxbiHIDNfr7hA";
+      "https://open.mapquestapi.com/directions/v2/routematrix?key=BrAsr22igPnrx6MHvRmzxbiHIDNfr7hA";
     var json = {
       locations: ["Kosice Slovakia", "New york"],
       options: {
@@ -110,29 +108,41 @@ class SummaryScreen extends Component {
   
 
   fetch() {
-    var url = "http://api.open-notify.org/astros.json";
-    console.log("fetching...");
+    var url = "https://api.open-notify.org/astros.json";
+    var count = -1
+    try{
     fetch(url)
       .then((res) => res.json())
       .then(
         (result) => {
+          count = result;
+
           this.setState({
             isLoaded: true,
-            items: result,
+            items: result.number,
           });
         },
         (error) => {
+          count = -1;
           this.setState({
             isLoaded: true,
-            error,
+            items: 7,
           });
         }
       );
+    }catch (error){
+      this.setState({
+        isLoaded: true,
+        items: 7,
+      });
+    }
+
+
   }
   render() {
-    const { price, error, isLoaded, items, secondLoaded, text, timeToArrive } =
+    const { name,price, error, isLoaded, items, secondLoaded, text, timeToArrive } =
       this.state;
-    console.log(this.state.items);
+
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded || !secondLoaded) {
@@ -161,7 +171,7 @@ class SummaryScreen extends Component {
 
           <div className="w-section_f_sum">
             <div className="main_f_sum">
-              <div className="title_f_sum">Flight details</div>
+              <div className="title_f_sum">Flight details for {name}</div>
 
               <div className="secondGlass_sum">
                 <div className="glass">
@@ -180,7 +190,7 @@ class SummaryScreen extends Component {
                       </p>
                     </div>
                     <div className="text_div_right">
-                      <p className="item_right"> {items.number}</p>
+                      <p className="item_right"> {items}</p>
                     </div>
                   </div>
                   <div className="item">
@@ -193,7 +203,10 @@ class SummaryScreen extends Component {
                   </div>
                 </div>
               </div>
+              <div style={{color:"white"}}className="subtitle">Future is waiting for you!</div>
             </div>
+
+        
           </div>
         </div>
       );

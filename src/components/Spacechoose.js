@@ -34,8 +34,7 @@ class Spacechoose extends PureComponent {
     return time;
   }
   componentDidMount() {
-    console.log(this.props);
-    console.log("fetching...");
+
     fetch("https://api.spacexdata.com/v4/launches")
       .then((res) => res.json())
       .then(
@@ -54,8 +53,7 @@ class Spacechoose extends PureComponent {
       );
   }
   callback = (name, details, price, time) => {
-    console.log("Spacechoose |/ ");
-    console.log(this.props);
+
     this.props.history.push({
       pathname: "/Wallmart",
       state: {
@@ -96,7 +94,7 @@ class Spacechoose extends PureComponent {
 
   render() {
     const { error, isLoaded, items } = this.state;
-    console.log(this.state.items);
+
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
