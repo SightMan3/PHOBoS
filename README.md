@@ -37,7 +37,7 @@ Our web app makes it barely an inconvenience to buy a ticket to your brighter fu
 First, you need to fill in the form with basic information about yourself. Then you will be transferred to list of our best starships.After you have choosen your favourite one, you can pick up all the accesories you need for your survival. Lastly, you'll see launch time, price for your flight and all the people waiting for you in space. 
 
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/SightMan3/PHOBoS/blob/master/src/assets/presentation_image.png?raw=true)
 
 # APIs we've used:
 
