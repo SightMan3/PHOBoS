@@ -108,7 +108,7 @@ class SummaryScreen extends Component {
   
 
   fetch() {
-    var url = "https://api.open-notify.org/astros.json";
+    var url = "http://api.open-notify.org/astros.json";
     var count = -1
     try{
     fetch(url)
@@ -144,7 +144,7 @@ class SummaryScreen extends Component {
       this.state;
 
     if (error) {
-      return <div>Error: {error.message}</div>;
+      return <div>Error: {error.message} try refreshing the site</div>;
     } else if (!isLoaded || !secondLoaded) {
       return (
         <div className="spaceContainerSummary">
