@@ -58,4 +58,8 @@ http://www.mapquestapi.com/geocoding/v1/address
 
 ## Challenges and accomplishments
 
-From this challange we've learned that finding a good free api is a lot harded than it sounds 
+From this challange we've learned that finding a good free api is a lot harded than it sounds
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
