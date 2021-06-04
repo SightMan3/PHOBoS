@@ -34,13 +34,14 @@ class SummaryScreen extends Component {
     for (var i = 0; i < array.length; i++) {
       final += array[i].price;
     }
-    this.setState({price: final});
+    this.setState({ price: final });
   }
 
   async fetchDistanceFromTwoPoints() {
-    var first_point = await this.fetchPoint("kosice");
-    first_point = { latitude: first_point.lat, longitude: first_point.lng };
-    var second_point = await this.fetchPoint("bratislava");
+   // var first_point = await this.fetchPoint("kosice");
+    var first_point = { latitude: 28.519687508787595, longitude: -80.65364264701837};
+    var text = this.props.location.state.adress 
+    var second_point = await this.fetchPoint(text === "" ? "Košice, Slovakia" : text);
     second_point = { latitude: second_point.lat, longitude: second_point.lng };
     var distance = getDistance(first_point, second_point) / 1000 + "km";
     console.log(distance);
@@ -106,34 +107,7 @@ class SummaryScreen extends Component {
       .then((response) => response.json())
       .then((data) => console.log(data));
   }
-  fetchDistance() {
-    // fetch(
-    //   "http://www.mapquestapi.com/geocoding/v1/reverse?key=BrAsr22igPnrx6MHvRmzxbiHIDNfr7hA&location=48.720287208800855, 21.25956559132703&includeRoadMetadata=true&includeNearestIntersection=true"
-    // )
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    // console.log("dupii")
-    // console.log(data.results[0].locations)
-    //   var url =
-    //   "http://www.mapquestapi.com/directions/v2/route?" +
-    //   "key=" + this.key + "&" +
-    //   "from="+{locations: [{ adminArea1Type: "Country", latLng: {lat: 45.750307,lng: -104.999472}} ]}+
-    //   "to="+{locations: [{ adminArea1Type: "Country", latLng: {lat: 39.750307,lng: -104.999472}} ]}+
-    //   "unit=k&" +
-    //   "routeType=fastest&" +
-    //   "doReverseGeocode=true";
-    // fetch(url)
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    //     console.log("dadaaa");
-    //     console.log(data);
-    //     this.setState({
-    //       text: data.toString(),
-    //       secondLoaded: true,
-    //     });
-    //   });
-    //});
-  }
+  
 
   fetch() {
     var url = "http://api.open-notify.org/astros.json";
@@ -222,7 +196,6 @@ class SummaryScreen extends Component {
             </div>
           </div>
         </div>
-
       );
     }
   }

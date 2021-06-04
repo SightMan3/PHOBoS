@@ -1,6 +1,6 @@
 $Input_shadow: rgba(0, 0, 0, 0.23) 0px 3px 6px;
 .w-section_f {
-  background-image: url("../assets/Web 1920 – 1.png");
+  background-image: url("../assets/Web 1920 – 12@2x.png");
   background-size: cover;
 
   height: 100vh;
@@ -32,7 +32,7 @@ $Input_shadow: rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
       text-align: center;
       width: 50%;
-      padding-left: 2%;
+      
       margin-bottom: 5%;
     }
 
@@ -147,7 +147,8 @@ $Input_shadow: rgba(0, 0, 0, 0.23) 0px 3px 6px;
     .name {
       outline: none;
       border: none;
-      background-color: grey;
+      background-color: rgba(255, 255, 255, .15);
+      backdrop-filter: blur(10px);
       width: 45%;
       height: 14%;
       border-radius: 100000000000px;

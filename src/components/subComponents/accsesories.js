@@ -20,8 +20,8 @@ class Accsesories extends Component {
 
     buttonClick = () =>{
         //summary
-        console.log("aksesorís \|/ ")
-        console.log(this.props)
+     
+   
         this.props.history.push({
             pathname: "/summary",
             state: {
