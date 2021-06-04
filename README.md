@@ -27,7 +27,8 @@ S. -> starship
 ## Description 
 
 It's year 2033. Solar panels sucked all energy from the Sun and it disapeared. Without our star, the Moon exploded and ocean inflow stopped. Wind power became useless too. The seas on the Earth started to evaporate, resources got tight, people started to starve and fight over the food.
-  And when all seemed dark and without hope, the one and the only solution has arised from darkness - Elo Sus. Finally there was a hope for survival. The only thing you needed to do was to sell your soul to get money, and get on the one of many Elo's starships powered by black matter. Our web app makes it barely an inconvenient to buy a ticket to brighter future. You can also buy all the accesories you need trough our website and they will wait for you all nicely packed on your starship. I hear you saying: "But I don't have enough money," but don't worry, you will work it off by ten/twenty years in our final destination. 
+
+And when all seemed dark and without hope, the one and the only solution has arised from darkness - Elo Sus. Finally there was a hope for survival. The only thing you needed to do was to sell your soul to get money, and get on the one of many Elo's starships powered by black matter. Our web app makes it barely an inconvenient to buy a ticket to brighter future. You can also buy all the accesories you need trough our website and they will wait for you all nicely packed on your starship. I hear you saying: "But I don't have enough money," but don't worry, you will work it off by ten/twenty years in our final destination. 
 
 ## Prototype 
 
