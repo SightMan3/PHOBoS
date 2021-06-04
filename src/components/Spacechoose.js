@@ -43,6 +43,7 @@ class Spacechoose extends PureComponent {
     this.props.history.push({
       pathname: "/Wallmart",
       state: {
+        items: [],
         rocket: {
           name: name,
           details: details,

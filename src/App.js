@@ -18,7 +18,6 @@ import Accsesories from "./components/subComponents/accsesories";
 import Spacechoose from './components/Spacechoose'
 
 function App() {
-  return (<SummaryScreen/>)
   return (
     <div className="App">
       <Router>
