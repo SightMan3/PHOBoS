@@ -1,3 +1,4 @@
+<h1 align="center">Project title</h1>
 # P.H.O.B.O.S
 
 P. -> painless
