@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import "../../sass/category.scss"
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 class Product extends Component {
     constructor(props) {
@@ -49,6 +50,7 @@ class Product extends Component {
 
 
                 </div>
+
             </div>
         );
     }

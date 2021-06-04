@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../sass/form.scss";
-class Apistesting extends Component {
+class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -10,6 +10,22 @@ class Apistesting extends Component {
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
+  }
+  test = () => {
+    console.log("form \|/ ")
+    console.log(this.props);
+
+    this.props.history.push({
+      pathname: "/flightpickup",
+      state: {
+        name:this.state.name,
+        adress:this.state.adress,
+        money:this.state.money,
+      }
+    });
+  };
+  componentDidMount(){
+    console.log(this.props)
   }
 
   handleInputChange(event) {
@@ -57,7 +73,7 @@ class Apistesting extends Component {
           </div>
           <div className="btn_con_f">
             {/* <button className="continue" onClick={this.test}>start exploring</button> */}
-            <button className="continue_f">proceed</button>
+            <button onClick={this.test} className="continue_f">proceed</button>
           </div>
         </div>
       </div>
@@ -65,4 +81,4 @@ class Apistesting extends Component {
   }
 }
 
-export default Apistesting;
+export default Form;

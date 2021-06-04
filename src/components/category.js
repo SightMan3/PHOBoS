@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import "../sass/category.scss"
 import Product from "./subComponents/product";
 import Distance from "geo-distance";
+import {NotificationContainer, NotificationManager} from "react-notifications";
+import 'react-notifications/lib/notifications.css';
 
 class Category extends Component {
     constructor(props) {
@@ -46,6 +48,9 @@ class Category extends Component {
 
     componentDidMount() {
 
+            console.log(this.props)
+       
+    
         fetch(`https://fakestoreapi.com${this.state.endpoint}`,  {
             method: "GET",
             mode: "cors",
@@ -84,6 +89,10 @@ class Category extends Component {
                 })
         }
 
+        if (route === "jewelery") {
+            console.log("wtf");
+        }
+
     }
 
     close = () => {
@@ -110,10 +119,14 @@ class Category extends Component {
                 pathname: "/Wallmart",
                 state: {
                     items: this.arr,
+                    name:this.props.location.state.name,
+                    adress:this.props.location.state.adress,
+                    money:this.props.location.state.money,
                     rocket: {
-                        name: this.props.location.state.rocket.name,
-                        price: this.props.location.state.rocket.price,
-                        details: this.props.location.state.rocket.details
+                        name:    this.props.location.state.rocket.name,
+                        price:   this.props.location.state.rocket.price,
+                        details: this.props.location.state.rocket.details,
+                        time:    this.props.location.state.rocket.time,
                     },
                 }
             });
@@ -127,10 +140,17 @@ class Category extends Component {
 
     }
 
+    createNotif = () => {
+        return (
+            NotificationManager.success("item added to cart", "Added")
+        )
+
+    }
 
 
     getChildData = (obj) => {
         this.arr.push(obj);
+        this.createNotif()
     }
 
     render() {
@@ -145,11 +165,15 @@ class Category extends Component {
                                 this.props.history.push({
                                     pathname: "/list",
                                     state: {
+                                        name:this.props.location.state.name,
+                                        adress:this.props.location.state.adress,
+                                        money:this.props.location.state.money,
                                         items: this.props.location.state.items,
                                         rocket: {
-                                            name: this.props.location.state.rocket.name,
-                                            price: this.props.location.state.rocket.price,
-                                            details: this.props.location.state.rocket.details
+                                            name:    this.props.location.state.rocket.name,
+                                            price:   this.props.location.state.rocket.price,
+                                            details: this.props.location.state.rocket.details,
+                                            time:    this.props.location.state.rocket.time,
                                         }
 
                                     }
@@ -170,6 +194,7 @@ class Category extends Component {
                         />
                     })}
                 </div>
+                <NotificationContainer />
             </div>
         );
     }

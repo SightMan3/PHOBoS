@@ -39,7 +39,7 @@ class Welcome extends Component {
 
                         <button onClick = {
                             () =>{
-                                this.props.history.push("/flightpickup");
+                                this.props.history.push("/form");
                             }
 
 

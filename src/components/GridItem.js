@@ -3,6 +3,7 @@ import React from 'react'
 class GridItem extends React.Component {
     constructor(props) {
         super(props);
+        this.dateUnix = props.dateUnix;
         this.name = props.name;
         this.details = props.details;
         this.callback = props.callback;
@@ -34,7 +35,8 @@ class GridItem extends React.Component {
                   <div className="btn_con">
                     <button onClick= {()=> {
                         let price = Math.floor(Math.random() * 1000000)+50000;
-                        this.callback(this.name,this.details, price)
+                        console.log(this.dateUnix)
+                        this.callback(this.name,this.details, price,this.dateUnix)
                     }}className="continue">start exploring</button>
                   </div>
                 </div>

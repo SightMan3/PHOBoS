@@ -11,16 +11,30 @@ class Spacechoose extends PureComponent {
       items: [],
     };
   }
-  timeConverter(UNIX_timestamp){
+  timeConverter(UNIX_timestamp) {
     var a = new Date(UNIX_timestamp * 1000);
-    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    var year = a.getFullYear() + 76;
-    var month = a.getMonth();
-    var date = a.getDate();
-    var time =  year + '.' + month + '.'+ date + '.';
+    var months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    var year = a.getFullYear() + 52;
+    var month = a.getMonth() == 0 ? a.getMonth() + 1  : a.getMonth();
+    var date = a.getDate() == 0 ? a.getDate() + 1  : a.getDate();
+    var time = year + "." + month + "." + date + ".";
     return time;
   }
   componentDidMount() {
+    console.log(this.props);
     console.log("fetching...");
     fetch("https://api.spacexdata.com/v4/launches")
       .then((res) => res.json())
@@ -39,32 +53,44 @@ class Spacechoose extends PureComponent {
         }
       );
   }
-  callback = (name, details, price) => {
+  callback = (name, details, price, time) => {
+    console.log("Spacechoose |/ ");
+    console.log(this.props);
     this.props.history.push({
       pathname: "/Wallmart",
       state: {
         items: [],
+        name: this.props.location.state.name,
+        adress: this.props.location.state.adress,
+        money: this.props.location.state.money,
         rocket: {
           name: name,
           details: details,
-          price: price
-        }
-      }
+          price: price,
+          time: time,
+        },
+      },
     });
   };
 
-  gridItem(name, details,static_fire_date_unix) {
-    var date = this.timeConverter(static_fire_date_unix)
-    try{
+  gridItem(name, details, static_fire_date_unix) {
+    var date = this.timeConverter(static_fire_date_unix);
+    try {
       var max = 40;
       var data = details.split(" ");
-      if(data.length > max){
-        details = data.slice(0, max).join(" ")+"..."; 
+      if (data.length > max) {
+        details = data.slice(0, max).join(" ") + "...";
       }
-      }catch(Exception){}
-    
+    } catch (Exception) {}
+
     return (
-      <GridItem callback={this.callback} name={name} details={details} date={date}></GridItem>
+      <GridItem
+      callback={this.callback}
+      name={name}
+      details={details}
+      date={date}
+      dateUnix={date}
+    />
     );
   }
 
@@ -74,7 +100,11 @@ class Spacechoose extends PureComponent {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return <div>Loading...</div>;
+      return (
+        <div className="spaceContainer">
+          <div>Loading...</div>{" "}
+        </div>
+      );
     } else {
       return (
         <div className="spaceContainer">
@@ -83,7 +113,9 @@ class Spacechoose extends PureComponent {
           </div>
           <div className="spaceRocketContainer">
             <div className="spaceGrid">
-              {items.map((el) => this.gridItem(el.name, el.details,el.static_fire_date_unix))}
+              {items.map((el) =>
+                this.gridItem(el.name, el.details, el.static_fire_date_unix)
+              )}
             </div>
           </div>
         </div>

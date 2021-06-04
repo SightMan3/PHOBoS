@@ -200,71 +200,153 @@
 
 }
 
-.wrapper {
-  height: 100vh;
-  width: 100%;
+.wrapper-wrapper {
+
   background-color: #2b2b2b;
 
-  .acc-title {
-    //background-color: red;
-    height: 20%;
+  display: grid;
+  grid-template-rows: repeat(7, 300px);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    color: white;
-    font-size: 80px;
-    font-weight: bold;
-  }
+  background-image: url("../assets/Web 1920 – 1.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 
-  .under_title {
-    height: 5%;
+  .wrapper {
+    height: 100%;
+    width: 100%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
 
-    margin-bottom: 5%;
-  }
+    .acc-title {
+      //background-color: red;
+      height: 20%;
+      margin-bottom: 5%;
 
-  .items {
-    //background-color: yellow;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-  }
+      color: white;
+      font-size: 80px;
+      font-weight: bold;
+    }
 
-  .item {
-    background-color: rgba(255, 255, 255, .15);
-    backdrop-filter: blur(10px);
+    .under_title {
+      height: 5%;
 
-    border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-    color: white;
-    height: 6vh;
-    width: 60%;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
 
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+      margin-bottom: 5%;
+    }
 
-    margin-bottom: 2%;
+    .items {
+      //background-color: yellow;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
 
-    button {
+    }
+
+    .item {
+      background-color: rgba(255, 255, 255, .15);
+      backdrop-filter: blur(10px);
+
+      border-radius: 15px;
+
+      color: white;
+      height: 6vh;
+      width: 60%;
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      margin-bottom: 2%;
+
+      button {
+        outline: none;
+        background-color: white;
+        border: none;
+
+        height: 40px;
+        width: 42px;
+        border-radius: 100px;
+
+        font-weight: bold;
+        font-size: 14px;
+
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+        } &:active {
+            transform: scale(1);
+          }
+
+        margin-right: 2%;
+      }
+
+
+
+      .img_cover {
+        height: 100%;
+        width: 6%;
+        margin-left: 5%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .image {
+          background-color: white;
+          height: 80%;
+          width: 80%;
+
+          background-size: cover;
+          background-position: center;
+
+          border-radius: 10px;
+
+        }
+      }
+
+      .name {
+        margin-left: 6%;
+        width: 65%;
+        font-weight: bold;
+
+        text-align: justify;
+        text-justify: distribute-all-lines;
+
+      }
+
+      .price {
+        font-weight: bold;
+        margin-right: 2%;
+        margin-left: 2%;
+        float: right;
+        position: relative;
+        width: 8%;
+      }
+    }
+
+    .confirm_buy {
       outline: none;
       background-color: white;
-      border: none;
+
+      border: 2px solid #2b2b2b;
 
       height: 40px;
-      width: 42px;
-      border-radius: 100px;
+      width: 12%;
+      border-radius: 50px;
 
       font-weight: bold;
       font-size: 14px;
@@ -275,72 +357,12 @@
       } &:active {
           transform: scale(1);
         }
-    }
-
-
-
-    .img_cover {
-      height: 100%;
-      width: 6%;
-      margin-left: 5%;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      .image {
-        background-color: white;
-        height: 80%;
-        width: 80%;
-
-        background-size: cover;
-        background-position: center;
-
-      }
-    }
-
-    .name {
-      margin-left: 6%;
-      width: 65%;
-      font-weight: bold;
-
-      text-align: justify;
-      text-justify: distribute-all-lines;
 
     }
-
-    .price {
-      font-weight: bold;
-      margin-right: 2%;
-      margin-left: 2%;
-      float: right;
-      position: relative;
-      width: 8%;
-    }
-  }
-
-  .confirm_buy {
-    outline: none;
-    background-color: white;
-
-    border: 2px solid #2b2b2b;
-
-    height: 40px;
-    width: 12%;
-    border-radius: 50px;
-
-    font-weight: bold;
-    font-size: 14px;
-
-    transition: all 0.2s ease-in-out;
-    &:hover {
-      transform: scale(1.1);
-    } &:active {
-        transform: scale(1);
-      }
-
   }
 }
+
+
 
 
 

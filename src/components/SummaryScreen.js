@@ -7,9 +7,10 @@ class SummaryScreen extends Component {
   constructor(props) {
     super(props);
     this.key = "BrAsr22igPnrx6MHvRmzxbiHIDNfr7hA";
-
+    console.log(props.location.state.rocket.time)
+    console.log(new Date(props.location.state.rocket.time).getTime()/1000000)
     this.state = {
-      timeToArrive: 1627995532*1000,
+      timeToArrive: new Date(props.location.state.rocket.time).getTime(),
       countdownFrom : Date.now(),
       error: null,
       isLoaded: false,
@@ -22,6 +23,8 @@ class SummaryScreen extends Component {
   componentDidMount() {
     this.fetchDistanceFromTwoPoints();
     this.fetch();
+    console.log("mary summary \|/ ")
+    console.log(this.props)
   }
 
   async fetchDistanceFromTwoPoints() {
@@ -37,6 +40,8 @@ class SummaryScreen extends Component {
     });
     return distance;
   }
+
+
   timeConverter(UNIX_timestamp){
     var a = new Date(UNIX_timestamp);
     var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -152,8 +157,8 @@ class SummaryScreen extends Component {
       return (
         <div className="spaceContainerSummary">
           <p className="summaryTitle">SUMMMARY</p>
-          <p className="summaryTitle">Time to arrive</p>
-          <Countdown  className="defaultText"  date={timeToArrive} />
+          <p className="defaultText">Time to arrive</p>
+          <Countdown  className="summaryTitle"  date={timeToArrive} />
           <p className="defaultText">PEOPLE IN SPACE: {items.number}</p>
     
           <p className="defaultText">KM TO TRAVEL: {text}</p>
