@@ -2,29 +2,39 @@ import React, { Component } from "react";
 import "../sass/summary.scss";
 import { getDistance } from "geolib";
 
-import Countdown from 'react-countdown';
+import Countdown from "react-countdown";
 class SummaryScreen extends Component {
   constructor(props) {
     super(props);
     this.key = "BrAsr22igPnrx6MHvRmzxbiHIDNfr7hA";
-    console.log(props.location.state.rocket.time)
-    console.log(new Date(props.location.state.rocket.time).getTime()/1000000)
+    console.log(props.location.state.rocket.time);
+    console.log(new Date(props.location.state.rocket.time).getTime() / 1000000);
     this.state = {
       timeToArrive: new Date(props.location.state.rocket.time).getTime(),
-      countdownFrom : Date.now(),
+      countdownFrom: Date.now(),
       error: null,
       isLoaded: false,
       items: [],
       secondLoaded: false,
       text: "Loading...",
-
+      price: "unknown €",
     };
   }
   componentDidMount() {
     this.fetchDistanceFromTwoPoints();
     this.fetch();
-    console.log("mary summary \|/ ")
-    console.log(this.props)
+    console.log("mary summary |/ ");
+    console.log(this.props);
+
+    var rocket = this.props.location.state.rocket.price;
+    var array = this.props.location.state.items; //price
+    console.log(rocket);
+    console.log(array);
+    var final = rocket;
+    for (var i = 0; i < array.length; i++) {
+      final += array[i].price;
+    }
+    this.setState({price: final});
   }
 
   async fetchDistanceFromTwoPoints() {
@@ -41,14 +51,26 @@ class SummaryScreen extends Component {
     return distance;
   }
 
-
-  timeConverter(UNIX_timestamp){
+  timeConverter(UNIX_timestamp) {
     var a = new Date(UNIX_timestamp);
-    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
     var year = a.getFullYear();
     var month = a.getMonth();
     var date = a.getDate();
-    var time =  year + '.' + month + '.'+ date + '.';
+    var time = year + "." + month + "." + date + ".";
     return time;
   }
   async fetchPoint(point) {
@@ -134,7 +156,8 @@ class SummaryScreen extends Component {
       );
   }
   render() {
-    const { error, isLoaded, items, secondLoaded, text,timeToArrive } = this.state;
+    const { price, error, isLoaded, items, secondLoaded, text, timeToArrive } =
+      this.state;
     console.log(this.state.items);
     if (error) {
       return <div>Error: {error.message}</div>;
@@ -155,24 +178,51 @@ class SummaryScreen extends Component {
       );
     } else {
       return (
-        <div className="spaceContainerSummary">
-          <p className="summaryTitle">SUMMMARY</p>
-          <p className="defaultText">Time to arrive</p>
-          <Countdown  className="summaryTitle"  date={timeToArrive} />
-          <p className="defaultText">PEOPLE IN SPACE: {items.number}</p>
-    
-          <p className="defaultText">KM TO TRAVEL: {text}</p>
-        </div>
-        //   <div className="spaceContainer">
-        //      <div className="spaceHeaderContainer">
-        //       <p className="title">Flight pick up, you.</p>
-        //     </div>
-        //     {/*  <div className="spaceRocketContainer">
-        //        <div className="spaceGrid">
+        <div className="container_of_content">
+          <div className="rocket_part">
+            <p className="title">SUMMARY</p>
 
-        //        </div>
-        //      </div>  */}
-        //   </div>
+            <Countdown className="title_s" date={timeToArrive} />
+          </div>
+
+          <div className="w-section_f_sum">
+            <div className="main_f_sum">
+              <div className="title_f_sum">Flight details</div>
+
+              <div className="secondGlass_sum">
+                <div className="glass">
+                  <div className="item">
+                    <div className="text_div_left">
+                      <p className="item_left"> Money to pay: </p>
+                    </div>
+                    <div className="text_div_right">
+                      <p className="item_right"> {price} €</p>
+                    </div>
+                  </div>
+                  <div className="item">
+                    <div className="text_div_left">
+                      <p className="item_left">
+                        People waiting for you in space:
+                      </p>
+                    </div>
+                    <div className="text_div_right">
+                      <p className="item_right"> {items.number}</p>
+                    </div>
+                  </div>
+                  <div className="item">
+                    <div className="text_div_left">
+                      <p className="item_left"> Km left to destination: </p>
+                    </div>
+                    <div className="text_div_right">
+                      <p className="item_right"> {text}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       );
     }
   }

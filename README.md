@@ -1,4 +1,6 @@
-# P.H.O.B.O.S
+<h1 align="center">P.H.O.B.O.S</h1>
+
+# Hack Kosice Marathon: P.H.O.B.O.S
 
 P. -> painless
 
@@ -12,69 +14,45 @@ O. -> on
 
 S. -> starship
 
-## Available Scripts
+## Team
 
-In the project directory, you can run:
+ - SUDO is bLoAt 
 
-### `npm start`
+### Team members
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ - Matúš Bárány, Stredná priemyselná škola elektrotechnická Košice Komenského 44
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+ - Lukáš Randuška, Stredná priemyselná škola elektrotechnická Košice Komenského 44
 
-### `npm test`
+## Description 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+It's year 2033. Solar panels sucked all energy from the Sun and it disapeared. Without our star, the Moon exploded and ocean inflow stopped. Wind power became useless too. The seas on the Earth started to evaporate, resources got tight, people started to starve and fight over the food.
 
-### `npm run build`
+And when all seemed dark and people started to lose their faith, the one with the solution has arised from darkness - Elon Sus. Finally, there was a hope for survival. The only thing you needed to do was to sell your soul to get money and get on the one of many Elon's starships powered by black matter. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Our web app makes it barely an inconvenience to buy a ticket to your brighter future. You can also buy all the accesories you may need for your flight trough our website and they will wait for you all nicely packed on your starship. I hear you saying: "But I don't have enough money," but don't worry, you will work it off by ten maybe twenty years in our final destination. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Prototype 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+First, you need to fill in the form with basic information about yourself. Then you will be transferred to list of our best starships.After you have choosen your favourite one, you can pick up all the accesories you need for your survival. Lastly, you'll see launch time, price for your flight and all the people waiting for you in space. 
 
-### `npm run eject`
+# APIs we've used:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+https://fakestoreapi.com/
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+https://api.spacexdata.com/v4/launches
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+http://api.open-notify.org/astros.json
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+http://open.mapquestapi.com/directions/v2/routematrix
 
-## Learn More
+http://www.mapquestapi.com/geocoding/v1/address
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## How to try
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+*List any URLs relevant to demonstrating your prototype, e.g. a live url where judges can preview your app. Note that judges won't be able to setup anything in their computers.*
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Challenges and accomplishments
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+From this challange we've learned that finding a good free api is a lot harded than it sounds 
