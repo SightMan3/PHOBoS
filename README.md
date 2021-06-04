@@ -1,4 +1,5 @@
-# P.H.O.B.O.S
+<h1 align="center">P.H.O.B.O.S</h1>
+# Hack Kosice Marathon: P.H.O.B.O.S
 
 P. -> painless
 
@@ -12,69 +13,31 @@ O. -> on
 
 S. -> starship
 
-## Available Scripts
+## Team
 
-In the project directory, you can run:
+ - SUDO is bLoAt 
 
-### `npm start`
+### Team members
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Teammate 1, School
+- Teammate 2, School
+- Teammate 3, School
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Description 
 
-### `npm test`
+It's year 2033. Solar panels sucked all energy from the Sun and it disapeared, without our star, the Moon exploded and ocean inflow stopped. Wind power became useless too. The seas on Earth started evaporating, resources got tight, people started to starve and fightover the food. And when all seemed dark and without hope, the one and the only solution has arised from darkness - Elo Sus. Finally there was a hope for survival. The only thing you needed to do was to sell your soul to get money, and get on the one of many Elo's starships powered by black matter. Our web app makes it barely an inconvenient to buy a ticket to brighter future. You can also buy all the accesories you need trough our website and they will wait for you all nicely packed on your starship. I hear you saying: "But I don't have enough money," but don't worry, you will work it off by ten/twenty years in our final destination. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Prototype 
 
-### `npm run build`
+First, you need to fill in the form with basic information about yourself. Then you will be transfered to list of our best starships.After you have choosen your favourite one, you can pick up all the accesories you need for your survival. Lastly, you'll see launch time, price for your flight and all the people waiting for you in space. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+APIs we've used:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How to try
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+*List any URLs relevant to demonstrating your prototype, e.g. a live url where judges can preview your app. Note that judges won't be able to setup anything in their computers.*
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Challenges and accomplishments
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+From this challange we've learned that finding a good free api is a lot harded than it sounds 
