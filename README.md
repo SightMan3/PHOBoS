@@ -52,10 +52,15 @@ http://open.mapquestapi.com/directions/v2/routematrix
 http://www.mapquestapi.com/geocoding/v1/address
 
 ## How to try
+ 
+You can buy tickets to safety here: 
 
-*List any URLs relevant to demonstrating your prototype, e.g. a live url where judges can preview your app. Note that judges won't be able to setup anything in their computers.*
-
+https://phobos-764e7.web.app/
 
 ## Challenges and accomplishments
 
-From this challange we've learned that finding a good free api is a lot harded than it sounds 
+From this challange we've learned that finding a good free api is a lot harded than it sounds
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
